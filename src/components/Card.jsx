@@ -1,10 +1,6 @@
-import React from "react";
-
 const Card = () => {
   return (
-    <div
-      className="max-w-sm rounded-3xl overflow-hidden shadow-lg p-2"
-    >
+    <div className="max-w-sm rounded-3xl overflow-hidden shadow-lg p-2">
       <img
         className="w-full rounded-2xl"
         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfJ5hSkM1pGC5I_gTNx-Bmpyb0QrwWm-TwiARKclttVPrZrIKfr0bTHyP0afaIHL7zks-AbODA7zAf9LYhKdKVM6s2YXB8jkFl-fWBTmse2y6O68grQjw6tOOMrtdsG1qkVOwRT05R5XVZIoRoJFsn_wUqkrABJwEGZN0Q0OZlLZxis2zkhOH2u1RI_dNd/s518/colobus.jpg"
