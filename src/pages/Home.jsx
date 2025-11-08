@@ -16,7 +16,7 @@ const Home = () => {
     fetchBlogs();
   }, []);
 
-  console.log(blogs)
+  
 
 
   return (
