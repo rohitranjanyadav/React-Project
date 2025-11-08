@@ -1,6 +1,18 @@
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
+import axios from "axios";
 
 const SingleBlog = () => {
+
+  const fetchSingleBlog=()=>{
+    axios.get("http://localhost:3000/blog")
+  }
+
+  useEffect(()=>{
+    fetchSingleBlog()
+  },[])
+
+
   return (
     <>
       <Navbar />
