@@ -22,7 +22,7 @@ const SingleBlog = () => {
     const response = await axios.delete(`http://localhost:3000/blog/${id}`);
     if (response.status === 200) {
       alert("Deleted Successfully");
-      navigate("/");
+      navigate("/")
     } else {
       alert("Something Went Wrong");
     }
@@ -38,7 +38,7 @@ const SingleBlog = () => {
               <div className="h-[460px] rounded-lg bg-gray-300 dark:bg-gray-700 mb-4">
                 <img
                   className="w-full h-full object-cover"
-                  src={`http://localhost:3000/${blog.image}`}
+                  src={blog.image}
                   alt="Product Image"
                 />
               </div>

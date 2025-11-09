@@ -6,7 +6,7 @@ const Card = ({ blog }) => {
       <div className="max-w-sm rounded-3xl overflow-hidden shadow-lg p-2">
         <img
           className="w-full rounded-2xl"
-          src={`http://localhost:3000/${blog.image}`}
+          src={blog.image}
           alt="Sunset in the mountains"
         />
         <div className="px-6 py-4">
