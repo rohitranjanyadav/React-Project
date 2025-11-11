@@ -13,29 +13,41 @@ const CreateBlog = () => {
   });
 
   const handleChange = (e) => {
-    // const value = e.target.value;
-    // const name = e.target.name;
-    const { name, value } = e.target;
-    setData({
-      ...data,
-      [name]: name === "image" ? e.target.files[0] : value,
-    });
-  };
+  const { name, value, files } = e.target;
+  setData({
+    ...data,
+    [name]: name === "image" ? files[0] : value,
+  });
+};
+
  
 
   const createBlog = async (e) => {
-    e.preventDefault();
-    const response = await axios.post("https://blog-bgj3.onrender.com/blog", data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("title", data.title);
+  formData.append("subtitle", data.subtitle);
+  formData.append("description", data.description);
+  if (data.image) formData.append("image", data.image);
+
+  try {
+    const response = await axios.post(
+      "https://blog-bgj3.onrender.com/blog",
+      formData
+    );
+
     if (response.status === 200) {
       navigate("/");
     } else {
-      alert("Something Went Wrong!!!");
+      alert("Something went wrong!");
     }
-  };
+  } catch (error) {
+    console.error("Error:", error.response ? error.response.data : error);
+    alert("Error while creating blog!");
+  }
+};
+
 
   return (
     <>

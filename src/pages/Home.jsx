@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import axios from "axios";
-import Footer from "../components/Footer";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
