@@ -10,7 +10,7 @@ const SingleBlog = () => {
   const [blog, setBlog] = useState({});
 
   const fetchSingleBlog = async () => {
-    const response = await axios.get(`http://localhost:3000/blog/${id}`);
+    const response = await axios.get(`https://blog-bgj3.onrender.com/blog/${id}`);
     setBlog(response.data.data);
   };
 
@@ -19,7 +19,7 @@ const SingleBlog = () => {
   }, []);
 
   const handleDelete = async () => {
-    const response = await axios.delete(`http://localhost:3000/blog/${id}`);
+    const response = await axios.delete(`https://blog-bgj3.onrender.com/blog/${id}`);
     if (response.status === 200) {
       alert("Deleted Successfully");
       navigate("/");

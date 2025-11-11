@@ -24,7 +24,7 @@ const EditBlog = () => {
   const editBlog = async (e) => {
     e.preventDefault();
     const response = await axios.patch(
-      "http://localhost:3000/blog/" + id,
+      "https://blog-bgj3.onrender.com/blog/" + id,
       data,
       {
         headers: {
@@ -40,7 +40,7 @@ const EditBlog = () => {
   };
 
   const fetchSingleBlog = async () => {
-    const response = await axios.get(`http://localhost:3000/blog/${id}`);
+    const response = await axios.get(`https://blog-bgj3.onrender.com/blog/${id}`);
     if (response.status === 200) {
       setData({
         title: response.data.data.title,
